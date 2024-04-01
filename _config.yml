@@ -1,6 +1,6 @@
-title: Minimal theme
+title: Andrew Marinic
 logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
+description: Webpage Resume and Projects
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
