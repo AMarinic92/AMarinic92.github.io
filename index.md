@@ -114,6 +114,3 @@ After completing a fourth year Real Time Systems class I was invited to take a t
 *   Cooking
 *   Urban Exploring 
 
-```
-
-```
