@@ -13,8 +13,8 @@ I am Andrew a computer science major from Canada. I have a passion for learning 
 <dt>LinkedIn</dt>
 <dd>[Andrew Marinic](https://www.linkedin.com/in/andrew-marinic/)</dd>
 <dt>Resume</dt>
-<dd>[Resume](./resume.html)</dd>
+<dd><a href="./resume.html" class="code">Resume</a></dd>
 <dt>Portfolio</dt>
-<dd>[Portfolio](./portfolio.html)</dd>
+<dd><a href="./portfolio.html" class="code">Portfolio</a></dd>
 </dl>
   
