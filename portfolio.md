@@ -2,8 +2,8 @@
 layout: default
 ---
 
-## Welcome to another page
+# Blender
 
-_yay_
+# Warhammer 40K
 
 [back](./)
