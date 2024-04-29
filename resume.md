@@ -9,16 +9,19 @@ September 2020 - 2024
 Major Computer Science, Minor Chemistry, University of Manitoba  
 
 # Experience
-## Teaching Assistant *University of Manitoba – Department of Computer Science*
-### Jan 2024 – May 2024 
+## Teaching Assistant 
+### *University of Manitoba – Department of Computer Science*
+#### Jan 2024 – May 2024 
 After achieving high grades in both computer organization and programming practices, I was qualified to become a teaching assistant. With strong interpersonal and communication abilities I assisted students in their studies during in person office hours as well as through email and online discussion boards. Additionally, I assisted staff with approved lecture substitution, invigilation, and relaying student difficulties. Upholding my duties required strong professionalism to uphold academic integrity and maintain a welcoming atmosphere, as well as timely communication with supervisors and staff.  
   
-## Marker *University of Manitoba – Department of Computer Science* 
-### Jan 2024 – May 2024 
+## Marker 
+### *University of Manitoba – Department of Computer Science* 
+#### Jan 2024 – May 2024 
 Due to my high performance in both computer organization and programming practices, I was qualified to mark for the classes. Responsibilities required frequent email communication with supervisors regarding marking schemes and schedules. Further communication regarding any irregularities in the scheme, and suspected academic integrity issues were required. Marking was mainly achieved via the Crowdmark platform. The roles required strong time management skills to keep up with university deadlines.  
 
-## Estimator and Office Manager *Midwest Fence * 
-### Seasonal 2018 - 2020 
+## Estimator and Office Manager 
+### *Midwest Fence * 
+#### Seasonal 2018 - 2020 
 Responsibilities include meeting customers for in-person measurements, quoting, booking, and managing projects. As well the quoting and estimating involved significant office work such as managing the phones, emails, file management, coordinating with other management staff, and dealing with drop-in customers.  
 
 # Projects  
@@ -31,7 +34,7 @@ A simple Android application designed for developers to track bugs. The group pr
 
 ## Accessibility Checker
 ### Chrome extension with distributive computing – *Internet Archive*  
-January 2024 – April 2024  
+#### January 2024 – April 2024  
 
 A proof-of-concept project was designed alongside advice and consultation from the Internet Archives UI team leader. The concept was to explore the possibility of using machine learning to assess accessibility issues under WCAG 2.2 guidelines to achieve this we built a Chrome extension that sent tasks to a server with CUDA capabilities to provide machine learning-assisted assessments of certain aspects of the site. My primary roles were as team leader, implementation of machine learning, and implementing HTML parsing algorithms. The project back end relied heavily on pre-established Python libraries such as BS4, TensorFlow, and HF Transformers. The front end was a Chrome extension built quickly with Vite and utilized a unique SSH socket to communicate with our back-end server. [Accessibility Checker](https://github.com/AMarinic92/4560-IA-Accessibility-Checker)  
 
