@@ -20,7 +20,7 @@ After achieving high grades in both computer organization and programming practi
 Due to my high performance in both computer organization and programming practices, I was qualified to mark for the classes. Responsibilities required frequent email communication with supervisors regarding marking schemes and schedules. Further communication regarding any irregularities in the scheme, and suspected academic integrity issues were required. Marking was mainly achieved via the Crowdmark platform. The roles required strong time management skills to keep up with university deadlines.  
 
 ## Estimator and Office Manager 
-### *Midwest Fence * 
+### *Midwest Fence* 
 #### Seasonal 2018 - 2020 
 Responsibilities include meeting customers for in-person measurements, quoting, booking, and managing projects. As well the quoting and estimating involved significant office work such as managing the phones, emails, file management, coordinating with other management staff, and dealing with drop-in customers.  
 
