@@ -51,35 +51,14 @@ After completing a fourth-year Real-Time Systems class I was invited to take a t
   }
 ```
 
-*   Time Management
-*   Problem Solving	
-*   Communication
-*   Creativity	
-*   Decision Making
-*   Friendly
-*   Working Under Pressure
-*   Teamwork
-*   Adaptability
-*   Learning Ability	
-*   Linux/Unix
-*   SQL
-*   Python
-*   TensorFlow
-*   Java
-*   Godot
-*   Unity
-*   Source SDK
-*   Android Development
-*   C
-*   Embedded Systems
-*   Real Time Networks
-*   Microsoft Office
-*   Cyber Security	 
-*   Safety
-*   Confidentiality
-*   Management
-*   Project Management
-*   Data analysis
+*   **Personal:** Time Management, Creativity, Working Under Pressure, Communication, Confidentiality, Safety, Problem Solving, Decision Making, Learning Ability, Adaptability, Project Management, Friendly, Data analysis
+*   **Team skills:** Task Oriented, Leadership, Conflict Resolution, Email Skills, Slack, Discord, Teams, GitHub, GitLab
+*   **Programming Languages:** C, Embedded C, Python, C++, Java
+*   **Frameworks and APIs:** Node, TensorFlow, Android Development, Vite
+*   **Databases:** SQLite, Neo4j, HSQLDB
+*   **Engines:** Godot, Unity, Source SDK		
+*   **Other Computer Skills:** Microsoft 365, GNU/Linux, Cyber Security, Real Time Networks, Docker, WCAG 2.2	
+
 
 # Hobbies
 
