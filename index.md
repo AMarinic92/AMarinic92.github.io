@@ -8,7 +8,7 @@ I am a conscientious, resourceful individual with excellent multitasking, analyt
 
 # Education
 
-September 2020 - 2024  
+September 2020 - June 2024  
 **Bachelor of Science**  
 Major Computer Science, Minor Chemistry, University of Manitoba  
 
