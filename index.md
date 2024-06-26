@@ -4,7 +4,7 @@ layout: default
 
 # Profile
 
-I am a conscientious, resourceful individual with excellent multitasking, analytical, problem-solving, and decision-making capabilities. I have effective communication and interpersonal skills to work both as a team player and autonomously. My communication is supplemented by both strong verbal and written skills. I can work under pressure, easily adaptable to change, and willing to learn new skills or training.
+I am a conscientious, resourceful individual with excellent multitasking, analytical, problem-solving, and decision-making capabilities. I have a passion for building both software and physical items, even better when I can combine the two. I have effective communication and interpersonal skills to work both as a team player and autonomously. My communication is supplemented by both strong verbal and written skills. I can work under pressure, easily adaptable to change, and willing to learn new skills or training. I always try to continue to learn new skills, and ideas in my personal time that I can bring to my work environment. 
 
 # Education
 
