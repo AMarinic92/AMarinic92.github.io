@@ -69,7 +69,11 @@ After completing a fourth-year Real-Time Systems class I was invited to take a t
 *   **Other Computer Skills:** Microsoft 365, Jira, Git (GitLab, GitHub, BitBucket), GNU/Linux, Cyber Security, DevSec, Real Time Networks, Docker/Containers, WCAG 2.2, System Architecture, Troubleshooting, Continuous Integration **Jenkins, Bitbucket Pipelines**
 
 # Hobbies
-
+```c
+    if(!working){
+      state = &hobbies;
+    }
+```
 *   Drawing
 *   Tinkering
 *   Magic the Gathering
