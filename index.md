@@ -13,6 +13,9 @@ September 2020 - June 2024
 Major Computer Science, Minor Chemistry, University of Manitoba  
 
 # Experience
+## Full Stack Application Developer
+Reimer World Corp - IT Department    
+
 ## Teaching Assistant
 University of Manitoba – Department of Computer Science    
   
@@ -27,11 +30,6 @@ Midwest Fence
 Gardon Construction  
 
 # Projects
-## Mantis
-Android application  
-January 2023 – April 2023  
-
-A simple Android application designed for developers to track bugs. The group project was for a software engineering class. We utilized standard Android Java development with the Agile design methodology. I primarily held a leadership position with additional development roles with Junit testing and designing domain-specific objects to use across layers. [Mantis Webpage](https://rozennoureev.github.io/Mantis-website/)  
 
 ## Accessibility Checker
 Chrome extension with distributive computing – Internet Archive  
@@ -45,6 +43,13 @@ January 2024 – April 2024
 
 After completing a fourth-year Real-Time Systems class I was invited to take a topics project to investigate if it was reasonable to ask students taking the Real-Time Systems class to attempt new topics. The project was done on a SAM E51 Curiosity Nano development board and was all written in C and two other students were working independently on the project. We had successfully utilized the onboard debugger for sending back messages to OpenOCD which was something previously unutilized by the class. Then we were tasked with designing a CAN network driver. After this another student was to implement a Wi-Fi card peripheral while I was tasked with implementing a new UART driver for an RS485 peripheral. The project concluded with us making a rudimentary network that passed along peripheral information and utilized some additional drivers we had written, for instance, my I2C drivers. We managed to control peripherals via PWMing and I2C SERCOM on one board via a private UART network with custom messages to another which in turn was connected to another board via a CAN network, the last of which boards had a wifi card which we controlled via HTTP requests. [Real-Time Networks Repo](https://github.com/University-of-Manitoba-Computer-Science/RealTimeNetworking)
 
+## Mantis
+Android application  
+January 2023 – April 2023  
+
+A simple Android application designed for developers to track bugs. The group project was for a software engineering class. We utilized standard Android Java development with the Agile design methodology. I primarily held a leadership position with additional development roles with Junit testing and designing domain-specific objects to use across layers. [Mantis Webpage](https://rozennoureev.github.io/Mantis-website/)  
+
+
 # Skills
 
 ```c
@@ -54,35 +59,41 @@ After completing a fourth-year Real-Time Systems class I was invited to take a t
   }
 ```
 
-*   Time Management
-*   Problem Solving	
-*   Communication
-*   Creativity	
-*   Decision Making
-*   Friendly
-*   Working Under Pressure
-*   Teamwork
-*   Adaptability
-*   Learning Ability	
-*   Linux/Unix
-*   SQL
-*   Python
-*   TensorFlow
-*   Java
-*   Godot
-*   Unity
-*   Source SDK
-*   Android Development
-*   C
-*   Embedded Systems
-*   Real Time Networks
-*   Microsoft Office
-*   Cyber Security	 
-*   Safety
-*   Confidentiality
-*   Management
-*   Project Management
-*   Data analysis
+### Soft Skills
+* Communication
+* Problem Solving
+* Decision Making
+* Creativity
+* Time Management
+* Friendly
+* Teamwork
+* Adaptability
+* Learning Ability
+* Working Under Pressure
+* Management
+* Project Management
+* Cyber Security
+* Confidentiality
+* Safety
+
+### Technical Skills
+* SQL
+* Python
+* Java/Jakarta EE
+* Node.js
+* React
+* Next.js
+* Linux/Unix
+* C
+* Android Development
+* TensorFlow
+* Godot
+* Unity
+* Source SDK
+* Embedded Systems
+* Real Time Networks
+* Data Analysis
+* Microsoft Office
 
 # Hobbies
 
@@ -95,7 +106,7 @@ After completing a fourth-year Real-Time Systems class I was invited to take a t
 *   Tinkering
 *   Magic the Gathering
 *   Dungeons and Dragons
-*   Video Games
+*   Video Games and Game Design
 *   Warhammer 40k
 *   Hiking
 *   Camping
