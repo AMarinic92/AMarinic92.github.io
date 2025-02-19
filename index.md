@@ -78,8 +78,10 @@ A simple Android application designed for developers to track bugs. The group pr
 
 ### Technical Skills
 * SQL
+* DB2 and z/OS
 * Python
 * Java/Jakarta EE
+* Payara Server
 * Node.js
 * React
 * Next.js
