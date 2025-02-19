@@ -9,6 +9,12 @@ September 2020 - 2024
 Major Computer Science, Minor Chemistry, University of Manitoba  
 
 # Experience
+
+## Full Stack Application Developer
+### *Reimer World Corp. - IT Department*
+#### Sept 2024 - current
+I have gained significant experience working in the technical side of the transportation industry, specializing in Java EE, Glassfish, and its modern iterations, Jakarta EE and Payara Server. I have also worked on modernizing systems, acquiring experience with Node.js, React, and Next.js. My primary roles involve full-stack development in both the Java EE and React ecosystems, as well as providing technical support when systems or software fail. I have experience working with on-prem servers as well as AWS (Lightsail and EC2). Additionally, I have worked with CI/CD pipelines using Jenkins and Bitbucket Pipelines to automate deployments and streamline development workflows. Effective teamwork is crucial in this role, and we rely on tools such as Teams and various Atlassian products to maintain team cohesion.
+
 ## Teaching Assistant 
 ### *University of Manitoba – Department of Computer Science*
 #### Jan 2024 – May 2024 
@@ -53,22 +59,17 @@ After completing a fourth-year Real-Time Systems class I was invited to take a t
   }
 ```
 
-*   **Personal:** Time Management, Creativity, Working Under Pressure, Communication, Confidentiality, Safety, Problem Solving, Decision Making, Learning Ability, Adaptability, Project Management, Friendly, Data analysis
-*   **Team skills:** Task Oriented, Leadership, Conflict Resolution, Email Skills, Slack, Discord, Teams, GitHub, GitLab
-*   **Programming Languages:** C, Embedded C, Python, C++, Java
-*   **Frameworks and APIs:** Node, TensorFlow, Android Development, Vite
-*   **Databases:** SQLite, Neo4j, HSQLDB
-*   **Engines:** Godot, Unity, Source SDK		
-*   **Other Computer Skills:** Microsoft 365, GNU/Linux, Cyber Security, Real Time Networks, Docker, WCAG 2.2	
-
+*   **Personal:** Time Management, Creativity, Working Under Pressure, Communication, Confidentiality, Safety, Problem Solving, Decision Making, Learning Ability, Adaptability, Project Management, Friendly, Data Analysis
+*   **Team skills:** Task Oriented, Leadership, Conflict Resolution, Email Skills, Slack, Discord, Teams, GitHub, GitLab, Team Collaboration, Technical Support, Agile Methodology
+*   **Programming Languages:** C, Embedded C, Python, C++, Java (SE/EE), JavaScript
+*   **Frameworks and APIs:** Node.js, Next.js, TensorFlow, Android Development, Vite, Java/Jakarta EE, PrimeFaces, JTOpen, Tailwind CSS
+*   **Databases:** SQLite, Neo4j, HSQLDB, DB2
+*   **Engines:** Godot, Unity, Source SDK
+*   **Systems:** Payara Server, AWS (Lightsail and EC2), On-prem Servers
+*   **Other Computer Skills:** Microsoft 365, Jira, Git (GitLab, GitHub, BitBucket), GNU/Linux, Cyber Security, DevSec, Real Time Networks, Docker/Containers, WCAG 2.2, System Architecture, Troubleshooting, Continuous Integration **Jenkins, Bitbucket Pipelines**
 
 # Hobbies
 
-```c
-    if(!working){
-      state = &hobbies;
-    }
-```
 *   Drawing
 *   Tinkering
 *   Magic the Gathering
