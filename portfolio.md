@@ -16,7 +16,7 @@ carousels:
 A small animatronic project I built for Halloween 2024 using the SAME51 development board, pneumatic relays, and a piston. I designed a randomly timed and dynamically programmed coffin mechanism, creating an unpredictable and eerie effect.
 
 # Warhammer 40K
-{% include carousel.html height="50" unit="%" duration="7" number="1" %}
+{% include carousel.html height="100" unit="%" duration="7" number="1" %}
 
 
 [back](./)
