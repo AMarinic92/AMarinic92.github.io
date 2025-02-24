@@ -31,6 +31,10 @@ Due to my high performance in both computer organization and programming practic
 Responsibilities include meeting customers for in-person measurements, quoting, booking, and managing projects. As well the quoting and estimating involved significant office work such as managing the phones, emails, file management, coordinating with other management staff, and dealing with drop-in customers.  
 
 # Projects  
+## Halloween Animatronic
+### Embedded C
+#### August 2024 - October 2024
+For Halloween 2024, I developed a custom animatronic project utilizing the SAME51 development board, pneumatic relays, and a piston-driven mechanism. The system is programmed to generate randomized activation intervals, ensuring an unpredictable and eerie effect. By leveraging real-time control capabilities, the firmware dynamically adjusts piston actuation based on preconfigured behavior patterns, enhancing the realism of the coffin's motion. This project integrates embedded programming, pneumatics, and mechanical actuation to create a sophisticated and immersive haunting experience.    
 
 ## Mantis
 ### Android application  
