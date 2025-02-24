@@ -5,6 +5,7 @@ carousels:
     - image: ./assets/images/rlfront.jpg
     - image: ./assets/images/rlside.jpg
     - image: ./assets/images/rlback.jpg
+youtubeId: 3t_7JxJU-VzoXQe1
 ---
 
 # Blender
@@ -12,6 +13,7 @@ carousels:
 
 # Halloween Projects
 ## The Coffin
+{% include youtubePlayer.html id=page.youtubeId %}
 [Github Page](https://github.com/AMarinic92/SAME51-Kit/tree/halloween)    
 A small animatronic project I built for Halloween 2024 using the SAME51 development board, pneumatic relays, and a piston. I designed a randomly timed and dynamically programmed coffin mechanism, creating an unpredictable and eerie effect.
 
