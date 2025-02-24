@@ -2,13 +2,13 @@
 ---
 
 @import "jekyll-theme-time-machine";
-  .embed-container {
-    display: flex;
-    justify-content: center;  /* Centers iframe horizontally */
-    align-items: center;      /* Centers iframe vertically, if you want */
-    width: 100%;              /* Ensure the container takes up the full width */
-    margin: 0 auto;           /* Optional: Centers the container itself */
-  }
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
 
 .embed-container iframe, .embed-container object, .embed-container embed {
   position: absolute;
