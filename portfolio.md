@@ -1,6 +1,12 @@
 ---
 layout: portfolio
+carousels:
+  - images: 
+    - image: ./assets/images/rlfront.jpg
+    - image: ./assets/images/rlside.jpg
+    - image: ./assets/images/rlback.jpg
 ---
+
 {% include carousel.html height="50" unit="%" duration="7" number="1" %}
 
 # Blender
@@ -14,12 +20,6 @@ A small animatronic project I built for Halloween 2024 using the SAME51 developm
 
 
 # Warhammer 40K
-carousels:
-  - images: 
-    - image: ./assets/images/rlfront.jpg
-    - image: ./assets/images/rlside.jpg
-    - image: ./assets/images/rlback.jpg
-
 ![RokkitBoyFront](./assets/images/rlfront.jpg)
 ![RokkitBoySide](./assets/images/rlside.jpg)
 ![RokkitBoyBack](./assets/images/rlback.jpg)
