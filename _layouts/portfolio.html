@@ -12,7 +12,6 @@
   <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 
 {% seo %}
-  {% include carousel.html height="50" unit="%" duration="7" number="1" %}
   {% include head-custom.html %}
 </head>
 
@@ -37,6 +36,7 @@
         </div>
         <article class="markdown-body">
           {{ content }}
+          {% include carousel.html height="50" unit="%" duration="7" number="1" %}
         </article>
       </div>
     </div>
