@@ -3,9 +3,8 @@ layout: default
 ---
 
 # Profile
-
-I am Andrew a computer science major from Canada. I have a passion for learning and love finding new skills. I thoroughly enjoy working with other motivated and inquisitive individuals on a plethora of projects. I have a wide skill set outside of computer science. Through my work in the construction industry, schooling, and my plethora of hobbies I find many opportunities to get involved with interesting projects. When I am relaxing I can be found wandering around my beloved home city or out in nature, and good company. This site is just a little resume and portfolio to give a better look at who I am and what my skills are.
-
+I am Andrew, a full-stack application developer and computer science major from Canada.    
+With a passion for learning and a love for acquiring new skills, I thrive in environments where I can collaborate with motivated and inquisitive individuals on a variety of projects. My skill set extends beyond computer science, shaped by my experiences in the construction industry, my academic background, and a diverse range of hobbies. These experiences give me the opportunity to get involved in a wide array of interesting, hands-on projects. When I’m not working, you’ll find me exploring my beloved home city or enjoying the outdoors with good company. This site serves as a resume and portfolio, offering a glimpse into who I am and the skills I bring to the table.
 ## Links
 
 - [AMarinic92 on GitHub](https://github.com/AMarinic92)
