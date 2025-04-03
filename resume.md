@@ -12,7 +12,7 @@ Major Computer Science, Minor Chemistry, University of Manitoba
 
 ## Full Stack Application Developer
 ### *Reimer World Corp. - IT Department*
-#### Sept 2024 - current
+#### Sept 2024
 I have gained significant experience working in the technical side of the transportation industry, specializing in Java EE, Glassfish, and its modern iterations, Jakarta EE and Payara Server. I have also worked on modernizing systems, acquiring experience with Node.js, React, and Next.js. My primary roles involve full-stack development in both the Java EE and React ecosystems, as well as providing technical support when systems or software fail. I have experience working with on-prem servers as well as AWS (Lightsail and EC2). Additionally, I have worked with CI/CD pipelines using Jenkins and Bitbucket Pipelines to automate deployments and streamline development workflows. Effective teamwork is crucial in this role, and we rely on tools such as Teams and various Atlassian products to maintain team cohesion.
 
 ## Teaching Assistant 
