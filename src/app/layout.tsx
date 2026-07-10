@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "@/data/resume";
+import { Providers, ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: `${site.name} — ${site.tagline}`,
@@ -13,8 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-dvh antialiased">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-dvh antialiased">
+        <Providers>
+          <ThemeToggle />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

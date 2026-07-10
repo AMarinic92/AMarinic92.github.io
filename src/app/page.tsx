@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Images } from "lucide-react";
 
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -76,6 +77,12 @@ export default function Home() {
               <LinkedInIcon /> LinkedIn
             </a>
           </div>
+          <Link
+            href="/portfolio"
+            className={cn(buttonVariants({ variant: "default", size: "sm" }))}
+          >
+            <Images /> View portfolio
+          </Link>
         </div>
       </aside>
 
@@ -123,14 +130,22 @@ export default function Home() {
         </Section>
 
         <Section id="experience" title="Experience">
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-6">
             {experience.map((e) => (
               <li
                 key={e.role}
                 className="flex flex-col border-l-2 border-border pl-4"
               >
-                <span className="font-medium">{e.role}</span>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                  <span className="font-medium">{e.role}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {e.period}
+                  </span>
+                </div>
                 <span className="text-sm text-muted-foreground">{e.org}</span>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {e.blurb}
+                </p>
               </li>
             ))}
           </ul>
@@ -155,30 +170,20 @@ export default function Home() {
 
         <Section id="skills" title="Skills">
           <div className="flex flex-col gap-4">
-            <div>
-              <h3 className="mb-2 text-sm font-medium text-muted-foreground">
-                Technical
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.technical.map((s) => (
-                  <Badge key={s} variant="secondary">
-                    {s}
-                  </Badge>
-                ))}
+            {skills.map((group) => (
+              <div key={group.label}>
+                <h3 className="mb-2 text-sm font-medium text-muted-foreground">
+                  {group.label}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((s) => (
+                    <Badge key={s} variant="secondary">
+                      {s}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 className="mb-2 text-sm font-medium text-muted-foreground">
-                Soft
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.soft.map((s) => (
-                  <Badge key={s} variant="outline">
-                    {s}
-                  </Badge>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </Section>
 
