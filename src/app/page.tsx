@@ -106,17 +106,19 @@ export default function Home() {
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {p.description}
                   </p>
-                  <a
-                    href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({ variant: "secondary", size: "sm" }),
-                      "w-fit",
-                    )}
-                  >
-                    View project <ExternalLink />
-                  </a>
+                  {p.href && (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(
+                        buttonVariants({ variant: "secondary", size: "sm" }),
+                        "w-fit",
+                      )}
+                    >
+                      View project <ExternalLink />
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}

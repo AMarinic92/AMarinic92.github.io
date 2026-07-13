@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: `Projects — ${site.name}`,
+  title: `Projects · ${site.name}`,
   description: "Software and embedded projects.",
 };
 
@@ -23,7 +23,7 @@ export default function Projects() {
       <header className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
         <p className="text-muted-foreground">
-          Software and embedded work — the code side of things.
+          Software and embedded work: the code side of things.
         </p>
       </header>
 
@@ -47,17 +47,19 @@ export default function Projects() {
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {p.description}
               </p>
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  buttonVariants({ variant: "secondary", size: "sm" }),
-                  "w-fit",
-                )}
-              >
-                View project <ExternalLink />
-              </a>
+              {p.href && (
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    buttonVariants({ variant: "secondary", size: "sm" }),
+                    "w-fit",
+                  )}
+                >
+                  View project <ExternalLink />
+                </a>
+              )}
             </CardContent>
           </Card>
         ))}

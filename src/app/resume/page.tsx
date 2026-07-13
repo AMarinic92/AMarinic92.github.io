@@ -4,7 +4,7 @@ import { site, profile, experience, education, skills } from "@/data/resume";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: `Résumé — ${site.name}`,
+  title: `Résumé · ${site.name}`,
   description: "Experience, education, and skills.",
 };
 
