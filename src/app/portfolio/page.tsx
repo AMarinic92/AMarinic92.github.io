@@ -7,7 +7,7 @@ import { site, kommandosPhotos, coffinYouTubeId } from "@/data/resume";
 import { Carousel } from "@/components/carousel";
 
 export const metadata: Metadata = {
-  title: `Portfolio — ${site.name}`,
+  title: `Portfolio · ${site.name}`,
   description: "Maker projects: Blender, animatronics, and Warhammer 40K minis.",
 };
 
@@ -38,7 +38,7 @@ export default function Portfolio() {
         </Link>
         <h1 className="text-3xl font-bold tracking-tight">Portfolio</h1>
         <p className="text-muted-foreground">
-          The side quests — where the software meets the physical.
+          The side quests: where the software meets the physical.
         </p>
       </header>
 
@@ -55,7 +55,7 @@ export default function Portfolio() {
         </div>
       </Section>
 
-      <Section title="Halloween Projects — The Coffin">
+      <Section title="Halloween Projects: The Coffin">
         <p className="text-sm leading-relaxed text-muted-foreground">
           A small animatronic I built for Halloween 2024 on the SAME51 dev
           board, driving pneumatic relays and a piston. A randomly timed,
@@ -78,7 +78,7 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className="w-fit text-sm text-primary underline-offset-4 hover:underline"
           >
-            GitHub — SAME51-Kit (original 2024 build)
+            GitHub: SAME51-Kit (original 2024 build)
           </a>
           <a
             href="https://github.com/AMarinic92/Coffin-Reborn"
@@ -86,12 +86,12 @@ export default function Portfolio() {
             rel="noopener noreferrer"
             className="w-fit text-sm text-primary underline-offset-4 hover:underline"
           >
-            GitHub — Coffin-Reborn (from-scratch firmware rebuild, ongoing)
+            GitHub: Coffin-Reborn (from-scratch firmware rebuild, ongoing)
           </a>
         </div>
       </Section>
 
-      <Section title="Warhammer 40K — Kommandos">
+      <Section title="Warhammer 40K: Kommandos">
         <p className="text-sm leading-relaxed text-muted-foreground">
           A squad of Orks I painted, model by model.
         </p>
