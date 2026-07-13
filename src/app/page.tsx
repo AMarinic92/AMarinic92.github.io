@@ -77,12 +77,6 @@ export default function Home() {
               <LinkedInIcon /> LinkedIn
             </a>
           </div>
-          <Link
-            href="/portfolio"
-            className={cn(buttonVariants({ variant: "default", size: "sm" }))}
-          >
-            <Images /> View portfolio
-          </Link>
         </div>
       </aside>
 
