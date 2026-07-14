@@ -1,75 +1,55 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import {
+  Carousel as CarouselRoot,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 
-// Image carousel (embla). Swipe, arrows, and dot indicators.
+// Image gallery built on the shadcn/embla Carousel: swipe, arrows, keyboard,
+// plus dot indicators wired through the carousel API.
 export function Carousel({ images, alt }: { images: string[]; alt: string }) {
-  const [emblaRef, embla] = useEmblaCarousel({ loop: true });
+  const [api, setApi] = useState<CarouselApi>();
   const [selected, setSelected] = useState(0);
 
-  const onSelect = useCallback(() => {
-    if (embla) setSelected(embla.selectedScrollSnap());
-  }, [embla]);
-
   useEffect(() => {
-    if (!embla) return;
-    onSelect();
-    embla.on("select", onSelect);
+    if (!api) return;
+    setSelected(api.selectedScrollSnap());
+    const onSelect = () => setSelected(api.selectedScrollSnap());
+    api.on("select", onSelect);
     return () => {
-      embla.off("select", onSelect);
+      api.off("select", onSelect);
     };
-  }, [embla, onSelect]);
+  }, [api]);
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="relative">
-        <div className="overflow-hidden rounded-xl border" ref={emblaRef}>
-          <div className="flex">
-            {images.map((src, i) => (
-              <div className="relative min-w-0 flex-[0_0_100%]" key={src}>
-                <div className="relative aspect-square bg-muted">
-                  <Image
-                    src={src}
-                    alt={`${alt} ${i + 1}`}
-                    fill
-                    sizes="(min-width: 1024px) 640px, 100vw"
-                    className="object-contain"
-                  />
-                </div>
+      <CarouselRoot setApi={setApi} opts={{ loop: true }}>
+        <CarouselContent>
+          {images.map((src, i) => (
+            <CarouselItem key={src}>
+              <div className="relative aspect-square overflow-hidden rounded-xl border bg-muted">
+                <Image
+                  src={src}
+                  alt={`${alt} ${i + 1}`}
+                  fill
+                  sizes="(min-width: 1024px) 640px, 100vw"
+                  className="object-contain"
+                />
               </div>
-            ))}
-          </div>
-        </div>
-
-        <button
-          type="button"
-          aria-label="Previous image"
-          onClick={() => embla?.scrollPrev()}
-          className={cn(
-            buttonVariants({ variant: "outline", size: "icon" }),
-            "absolute left-2 top-1/2 -translate-y-1/2 bg-background/80",
-          )}
-        >
-          <ChevronLeft />
-        </button>
-        <button
-          type="button"
-          aria-label="Next image"
-          onClick={() => embla?.scrollNext()}
-          className={cn(
-            buttonVariants({ variant: "outline", size: "icon" }),
-            "absolute right-2 top-1/2 -translate-y-1/2 bg-background/80",
-          )}
-        >
-          <ChevronRight />
-        </button>
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-2 bg-background/80" />
+        <CarouselNext className="right-2 bg-background/80" />
+      </CarouselRoot>
 
       <div className="flex flex-wrap justify-center gap-1.5">
         {images.map((src, i) => (
@@ -78,9 +58,9 @@ export function Carousel({ images, alt }: { images: string[]; alt: string }) {
             key={src}
             aria-label={`Go to image ${i + 1}`}
             aria-current={i === selected}
-            onClick={() => embla?.scrollTo(i)}
+            onClick={() => api?.scrollTo(i)}
             className={cn(
-              "h-2 w-2 rounded-full transition-colors",
+              "size-2 rounded-full transition-colors",
               i === selected ? "bg-foreground" : "bg-muted-foreground/40",
             )}
           />

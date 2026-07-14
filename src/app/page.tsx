@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ExternalLink, Images } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -13,16 +11,29 @@ import {
   skills,
   hobbies,
 } from "@/data/resume";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldLegend,
+  FieldSet,
+} from "@/components/ui/field";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemFooter,
+  ItemGroup,
+  ItemHeader,
+  ItemTitle,
+} from "@/components/ui/item";
+import { Separator } from "@/components/ui/separator";
 
 function Section({
   id,
@@ -34,10 +45,11 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-8">
-      <h2 className="mb-4 text-xl font-semibold tracking-tight">{title}</h2>
+    <FieldSet id={id} className="min-w-0 scroll-mt-8 gap-4">
+      <FieldLegend className="mb-0 text-xl">{title}</FieldLegend>
+      <Separator />
       {children}
-    </section>
+    </FieldSet>
   );
 }
 
@@ -46,151 +58,148 @@ export default function Home() {
     <div className="mx-auto grid max-w-6xl gap-12 px-6 py-12 lg:grid-cols-[300px_1fr] lg:gap-16 lg:py-20">
       <aside className="lg:sticky lg:top-20 lg:h-fit">
         <div className="flex flex-col items-start gap-5">
-          <Image
-            src="/logo.png"
-            alt={site.name}
-            width={96}
-            height={96}
-            className="rounded-2xl border"
-            priority
-          />
+          <Avatar className="size-24 rounded-2xl border">
+            <AvatarImage src="/logo.png" alt={site.name} />
+            <AvatarFallback className="rounded-2xl text-2xl">AM</AvatarFallback>
+          </Avatar>
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{site.name}</h1>
-            <p className="mt-1 text-muted-foreground">{site.tagline}</p>
+            <FieldDescription className="mt-1 text-base">
+              {site.tagline}
+            </FieldDescription>
           </div>
-          <p className="text-sm text-muted-foreground">{site.description}</p>
+          <FieldDescription>{site.description}</FieldDescription>
           <div className="flex flex-wrap gap-2">
-            <a
-              href={site.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-            >
-              <GitHubIcon /> GitHub
-            </a>
-            <a
-              href={site.socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-            >
-              <LinkedInIcon /> LinkedIn
-            </a>
+            <Button asChild variant="outline" size="sm">
+              <a
+                href={site.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon /> GitHub
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <a
+                href={site.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon /> LinkedIn
+              </a>
+            </Button>
           </div>
         </div>
       </aside>
 
       <main className="flex flex-col gap-12">
         <Section id="about" title="About">
-          <p className="leading-relaxed text-muted-foreground">{profile}</p>
+          <FieldDescription className="leading-relaxed">
+            {profile}
+          </FieldDescription>
         </Section>
 
         <Section id="projects" title="Projects">
-          <div className="flex flex-col gap-4">
+          <ItemGroup className="gap-4">
             {projects.map((p) => (
-              <Card key={p.title}>
-                <CardHeader>
-                  <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-                    <div>
-                      <CardTitle className="text-base">{p.title}</CardTitle>
-                      <CardDescription className="mt-1">
-                        {p.subtitle}
-                      </CardDescription>
-                    </div>
-                    <span className="shrink-0 text-xs text-muted-foreground">
-                      {p.period}
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex flex-col gap-4">
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+              <Item key={p.title} variant="outline" className="items-start">
+                <ItemContent className="gap-1.5">
+                  <ItemHeader>
+                    <ItemTitle className="text-base">{p.title}</ItemTitle>
+                    <ItemActions>
+                      <Badge variant="secondary">{p.period}</Badge>
+                    </ItemActions>
+                  </ItemHeader>
+                  <ItemDescription>{p.subtitle}</ItemDescription>
+                  <ItemDescription className="line-clamp-none leading-relaxed">
                     {p.description}
-                  </p>
-                  {p.href && (
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={cn(
-                        buttonVariants({ variant: "secondary", size: "sm" }),
-                        "w-fit",
-                      )}
-                    >
-                      View project <ExternalLink />
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
+                  </ItemDescription>
+                </ItemContent>
+                {p.href && (
+                  <ItemFooter>
+                    <Button asChild variant="secondary" size="sm">
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View project <ExternalLink />
+                      </a>
+                    </Button>
+                  </ItemFooter>
+                )}
+              </Item>
             ))}
-          </div>
+          </ItemGroup>
         </Section>
 
         <Section id="experience" title="Experience">
-          <ul className="flex flex-col gap-6">
+          <ItemGroup className="gap-4">
             {experience.map((e) => (
-              <li
-                key={e.role}
-                className="flex flex-col border-l-2 border-border pl-4"
-              >
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                  <span className="font-medium">{e.role}</span>
-                  <span className="text-xs text-muted-foreground">
-                    {e.period}
-                  </span>
-                </div>
-                <span className="text-sm text-muted-foreground">{e.org}</span>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {e.blurb}
-                </p>
-              </li>
+              <Item key={e.role} variant="outline" className="items-start">
+                <ItemContent className="gap-1.5">
+                  <ItemHeader>
+                    <ItemTitle className="text-base">{e.role}</ItemTitle>
+                    <ItemActions>
+                      <Badge variant="secondary">{e.period}</Badge>
+                    </ItemActions>
+                  </ItemHeader>
+                  <ItemDescription>{e.org}</ItemDescription>
+                  <ItemDescription className="line-clamp-none leading-relaxed">
+                    {e.blurb}
+                  </ItemDescription>
+                </ItemContent>
+              </Item>
             ))}
-          </ul>
+          </ItemGroup>
         </Section>
 
         <Section id="education" title="Education">
-          <div className="flex flex-col gap-3">
+          <ItemGroup className="gap-4">
             {education.map((ed) => (
-              <div
-                key={ed.school}
-                className="flex flex-col border-l-2 border-border pl-4"
-              >
-                <span className="font-medium">{ed.degree}</span>
-                <span className="text-sm">{ed.detail}</span>
-                <span className="text-sm text-muted-foreground">
-                  {ed.school} · {ed.period}
-                </span>
-              </div>
+              <Item key={ed.school} variant="outline" className="items-start">
+                <ItemContent className="gap-1.5">
+                  <ItemHeader>
+                    <ItemTitle className="text-base">{ed.degree}</ItemTitle>
+                    <ItemActions>
+                      <Badge variant="secondary">{ed.period}</Badge>
+                    </ItemActions>
+                  </ItemHeader>
+                  <ItemDescription className="line-clamp-none">
+                    {ed.detail}
+                  </ItemDescription>
+                  <ItemDescription>{ed.school}</ItemDescription>
+                </ItemContent>
+              </Item>
             ))}
-          </div>
+          </ItemGroup>
         </Section>
 
         <Section id="skills" title="Skills">
-          <div className="flex flex-col gap-4">
+          <FieldGroup className="gap-4">
             {skills.map((group) => (
-              <div key={group.label}>
-                <h3 className="mb-2 text-sm font-medium text-muted-foreground">
-                  {group.label}
-                </h3>
-                <div className="flex flex-wrap gap-2">
+              <Field key={group.label}>
+                <FieldLabel>{group.label}</FieldLabel>
+                <FieldContent className="flex-row flex-wrap gap-2">
                   {group.items.map((s) => (
                     <Badge key={s} variant="secondary">
                       {s}
                     </Badge>
                   ))}
-                </div>
-              </div>
+                </FieldContent>
+              </Field>
             ))}
-          </div>
+          </FieldGroup>
         </Section>
 
         <Section id="hobbies" title="Hobbies">
-          <div className="flex flex-wrap gap-2">
+          <FieldContent className="flex-row flex-wrap gap-2">
             {hobbies.map((h) => (
               <Badge key={h} variant="outline">
                 {h}
               </Badge>
             ))}
-          </div>
+          </FieldContent>
         </Section>
       </main>
     </div>

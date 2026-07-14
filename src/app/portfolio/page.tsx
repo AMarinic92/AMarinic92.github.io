@@ -5,6 +5,14 @@ import { ArrowLeft } from "lucide-react";
 
 import { site, kommandosPhotos, coffinYouTubeId } from "@/data/resume";
 import { Carousel } from "@/components/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
+import {
+  FieldDescription,
+  FieldLegend,
+  FieldSet,
+} from "@/components/ui/field";
+import { Separator } from "@/components/ui/separator";
 
 export const metadata: Metadata = {
   title: `Portfolio · ${site.name}`,
@@ -19,10 +27,10 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex flex-col gap-4">
-      <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
+    <FieldSet className="min-w-0 gap-4">
+      <FieldLegend className="mb-0 text-xl">{title}</FieldLegend>
       {children}
-    </section>
+    </FieldSet>
   );
 }
 
@@ -30,71 +38,94 @@ export default function Portfolio() {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-12 lg:py-20">
       <header className="flex flex-col gap-4">
-        <Link
-          href="/"
-          className="inline-flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
+        <Button
+          asChild
+          variant="link"
+          className="h-auto w-fit justify-start gap-1.5 p-0 text-muted-foreground hover:text-foreground"
         >
-          <ArrowLeft className="size-4" /> Back to résumé
-        </Link>
+          <Link href="/">
+            <ArrowLeft className="size-4" /> Back to résumé
+          </Link>
+        </Button>
         <h1 className="text-3xl font-bold tracking-tight">Portfolio</h1>
-        <p className="text-muted-foreground">
+        <FieldDescription>
           The side quests: where the software meets the physical.
-        </p>
+        </FieldDescription>
       </header>
 
+      <Separator />
+
       <Section title="Blender">
-        <div className="overflow-hidden rounded-xl border bg-muted">
-          <Image
-            src="/portfolio/sword.gif"
-            alt="Sword modelled and animated in Blender"
-            width={600}
-            height={753}
-            unoptimized
-            className="mx-auto h-auto w-full max-w-sm"
-          />
+        <div className="mx-auto w-full max-w-sm">
+          <AspectRatio
+            ratio={600 / 753}
+            className="overflow-hidden rounded-xl border bg-muted"
+          >
+            <Image
+              src="/portfolio/sword.gif"
+              alt="Sword modelled and animated in Blender"
+              fill
+              unoptimized
+              sizes="(min-width: 640px) 384px, 100vw"
+              className="object-contain"
+            />
+          </AspectRatio>
         </div>
       </Section>
 
       <Section title="Halloween Projects: The Coffin">
-        <p className="text-sm leading-relaxed text-muted-foreground">
+        <FieldDescription className="leading-relaxed">
           A small animatronic I built for Halloween 2024 on the SAME51 dev
           board, driving pneumatic relays and a piston. A randomly timed,
           dynamically programmed coffin mechanism for an unpredictable, eerie
           effect.
-        </p>
-        <div className="relative aspect-video overflow-hidden rounded-xl border">
+        </FieldDescription>
+        <AspectRatio
+          ratio={16 / 9}
+          className="overflow-hidden rounded-xl border"
+        >
           <iframe
-            className="absolute inset-0 h-full w-full"
+            className="size-full"
             src={`https://www.youtube.com/embed/${coffinYouTubeId}`}
             title="The Coffin animatronic"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-        </div>
+        </AspectRatio>
         <div className="flex flex-col gap-1.5">
-          <a
-            href="https://github.com/AMarinic92/SAME51-Kit/tree/halloween"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit text-sm text-primary underline-offset-4 hover:underline"
+          <Button
+            asChild
+            variant="link"
+            className="h-auto w-fit justify-start p-0"
           >
-            GitHub: SAME51-Kit (original 2024 build)
-          </a>
-          <a
-            href="https://github.com/AMarinic92/Coffin-Reborn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit text-sm text-primary underline-offset-4 hover:underline"
+            <a
+              href="https://github.com/AMarinic92/SAME51-Kit/tree/halloween"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub: SAME51-Kit (original 2024 build)
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="link"
+            className="h-auto w-fit justify-start p-0"
           >
-            GitHub: Coffin-Reborn (from-scratch firmware rebuild, ongoing)
-          </a>
+            <a
+              href="https://github.com/AMarinic92/Coffin-Reborn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub: Coffin-Reborn (from-scratch firmware rebuild, ongoing)
+            </a>
+          </Button>
         </div>
       </Section>
 
       <Section title="Warhammer 40K: Kommandos">
-        <p className="text-sm leading-relaxed text-muted-foreground">
+        <FieldDescription>
           A squad of Orks I painted, model by model.
-        </p>
+        </FieldDescription>
         <Carousel images={kommandosPhotos} alt="Painted Ork Kommando mini" />
       </Section>
     </div>

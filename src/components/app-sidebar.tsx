@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronsUpDown, FolderGit2, Home, Images, FileText } from "lucide-react";
 
 import { site } from "@/data/resume";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Sidebar,
   SidebarContent,
@@ -73,13 +73,12 @@ export function AppSidebar() {
                   size="lg"
                   className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
-                  <Image
-                    src="/logo.png"
-                    alt={site.name}
-                    width={32}
-                    height={32}
-                    className="size-8 rounded-lg"
-                  />
+                  <Avatar className="size-8 rounded-lg">
+                    <AvatarImage src="/logo.png" alt={site.name} />
+                    <AvatarFallback className="rounded-lg text-xs">
+                      AM
+                    </AvatarFallback>
+                  </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-medium">{site.name}</span>
                     <span className="truncate text-xs text-muted-foreground">

@@ -31,6 +31,13 @@ export const experience = [
       "Working the technical side of the transportation industry, I own frontend, backend microservices, a desktop application, and security automation for an internal logistics and dispatch platform, shipping end-to-end, from UI through infrastructure and CI/CD. On the web side I build with React, Next.js, and TypeScript on the frontend and Node.js microservices on the backend, backed by MySQL, alongside the PHP and Java / Jakarta EE (Payara) systems we maintain. I designed and built a scheduled, unattended security-scanning pipeline from scratch: SAST, SCA, and DAST driving Trivy, Semgrep, Gitleaks, OSV-Scanner, ZAP, and Nuclei, running on AWS with Bitbucket Pipelines for CI/CD and auto-filing findings into our ticketing and chat tools. I also keep docs current and jump on things when systems break. We keep the team cohesive with Teams and Atlassian tooling.",
   },
   {
+    role: "Creative Team – Programming & Fabrication",
+    org: "Killer Noob Escape",
+    period: "Apr 2026 – present",
+    blurb:
+      "On the creative team I work across code and hardware for the escape-room experiences: programming the embedded systems behind the puzzles and effects — ESP32 and Arduino firmware on FreeRTOS, NFC and RS485 puzzle electronics, and air/pneumatic monitoring — while also taking on the physical side with repairs, fabrication, and builds.",
+  },
+  {
     role: "Teaching Assistant",
     org: "University of Manitoba, Dept. of Computer Science",
     period: "Jan 2024 – May 2024",
@@ -69,18 +76,34 @@ export const projects: {
     href: "https://github.com/AMarinic92/Coffin-Reborn",
   },
   {
+    title: "Card Barrage",
+    subtitle: "Full-stack Magic: The Gathering engine: Next.js · Go · Postgres + Memgraph",
+    period: "Nov 2025 – present",
+    description:
+      "A Magic: The Gathering companion I'm building end to end, born out of the hobby. An Express/Next.js front end (Next.js handling auth) talks to a Go backend chosen for its low-level control and concurrency. Data is split across two stores: Postgres via GORM as the single source of truth, and a Memgraph graph database modelling the fundamental gameplay relationships to drive a card suggestion engine.",
+    href: "https://github.com/AMarinic92/Card-Barrage",
+  },
+  {
     title: "Killer Air",
     subtitle: "Embedded firmware: Arduino Mega + FreeRTOS",
-    period: "Personal project",
+    period: "Killer Noob Escape",
     description:
       "An air-compressor monitoring rig on an Arduino Mega running FreeRTOS. It reads the compressor's state and watches for the conditions I care about, with the RTOS juggling the monitoring tasks on tight timing. An embedded build in the space where firmware meets real hardware.",
   },
   {
     title: "ESP32 Puzzle System",
     subtitle: "Embedded firmware: ESP32 + FreeRTOS, RS485 & NFC",
-    period: "Personal project",
+    period: "Killer Noob Escape",
     description:
       "A physical puzzle system built on the ESP32 with FreeRTOS, tying together an RS485 bus and two PN5180 NFC readers. The RTOS coordinates the readers and bus traffic so the puzzle can react to tags in real time. The kind of software-meets-physical build I enjoy most.",
+  },
+  {
+    title: "AI Accessibility Checker",
+    subtitle: "WCAG 2.2 AA scanner for the Internet Archive: Python · TypeScript · Docker",
+    period: "Jan – Apr 2024",
+    description:
+      "A COMP 4560 capstone project built with the Internet Archive as the client: an AI-assisted tool that scans web content for Web Content Accessibility Guidelines (WCAG) 2.2 level-AA issues and returns practical, prioritized recommendations. A containerized Python and TypeScript stack, delivered by a small team over a single term.",
+    href: "https://github.com/AMarinic92/4560-IA-Accessibility-Checker",
   },
 ];
 

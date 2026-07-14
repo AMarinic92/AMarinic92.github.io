@@ -2,6 +2,31 @@ import type { Metadata } from "next";
 
 import { site, profile, experience, education, skills } from "@/data/resume";
 import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldLegend,
+  FieldSet,
+} from "@/components/ui/field";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemHeader,
+  ItemTitle,
+} from "@/components/ui/item";
 
 export const metadata: Metadata = {
   title: `Résumé · ${site.name}`,
@@ -11,66 +36,81 @@ export const metadata: Metadata = {
 export default function Resume() {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-12 lg:py-20">
-      <header className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold tracking-tight">{site.name}</h1>
-        <p className="text-muted-foreground">{site.tagline}</p>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          {profile}
-        </p>
-      </header>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl">{site.name}</CardTitle>
+          <CardDescription className="text-base">
+            {site.tagline}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <FieldDescription className="leading-relaxed">
+            {profile}
+          </FieldDescription>
+        </CardContent>
+      </Card>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">Experience</h2>
-        <ul className="flex flex-col gap-6">
+      <FieldSet className="min-w-0 gap-4">
+        <FieldLegend className="mb-0 text-xl">Experience</FieldLegend>
+        <ItemGroup className="gap-4">
           {experience.map((e) => (
-            <li key={e.role} className="flex flex-col border-l-2 border-border pl-4">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                <span className="font-medium">{e.role}</span>
-                <span className="text-xs text-muted-foreground">{e.period}</span>
-              </div>
-              <span className="text-sm text-muted-foreground">{e.org}</span>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {e.blurb}
-              </p>
-            </li>
+            <Item key={e.role} variant="outline" className="items-start">
+              <ItemContent className="gap-1.5">
+                <ItemHeader>
+                  <ItemTitle className="text-base">{e.role}</ItemTitle>
+                  <ItemActions>
+                    <Badge variant="secondary">{e.period}</Badge>
+                  </ItemActions>
+                </ItemHeader>
+                <ItemDescription>{e.org}</ItemDescription>
+                <ItemDescription className="line-clamp-none leading-relaxed">
+                  {e.blurb}
+                </ItemDescription>
+              </ItemContent>
+            </Item>
           ))}
-        </ul>
-      </section>
+        </ItemGroup>
+      </FieldSet>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">Education</h2>
-        <div className="flex flex-col gap-3">
+      <FieldSet className="min-w-0 gap-4">
+        <FieldLegend className="mb-0 text-xl">Education</FieldLegend>
+        <ItemGroup className="gap-4">
           {education.map((ed) => (
-            <div key={ed.school} className="flex flex-col border-l-2 border-border pl-4">
-              <span className="font-medium">{ed.degree}</span>
-              <span className="text-sm">{ed.detail}</span>
-              <span className="text-sm text-muted-foreground">
-                {ed.school} · {ed.period}
-              </span>
-            </div>
+            <Item key={ed.school} variant="outline" className="items-start">
+              <ItemContent className="gap-1.5">
+                <ItemHeader>
+                  <ItemTitle className="text-base">{ed.degree}</ItemTitle>
+                  <ItemActions>
+                    <Badge variant="secondary">{ed.period}</Badge>
+                  </ItemActions>
+                </ItemHeader>
+                <ItemDescription className="line-clamp-none">
+                  {ed.detail}
+                </ItemDescription>
+                <ItemDescription>{ed.school}</ItemDescription>
+              </ItemContent>
+            </Item>
           ))}
-        </div>
-      </section>
+        </ItemGroup>
+      </FieldSet>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">Skills</h2>
-        <div className="flex flex-col gap-4">
+      <FieldSet className="min-w-0 gap-4">
+        <FieldLegend className="mb-0 text-xl">Skills</FieldLegend>
+        <FieldGroup className="gap-4">
           {skills.map((group) => (
-            <div key={group.label}>
-              <h3 className="mb-2 text-sm font-medium text-muted-foreground">
-                {group.label}
-              </h3>
-              <div className="flex flex-wrap gap-2">
+            <Field key={group.label}>
+              <FieldLabel>{group.label}</FieldLabel>
+              <FieldContent className="flex-row flex-wrap gap-2">
                 {group.items.map((s) => (
                   <Badge key={s} variant="secondary">
                     {s}
                   </Badge>
                 ))}
-              </div>
-            </div>
+              </FieldContent>
+            </Field>
           ))}
-        </div>
-      </section>
+        </FieldGroup>
+      </FieldSet>
     </div>
   );
 }
