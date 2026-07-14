@@ -11,7 +11,7 @@ export const site = {
 } as const;
 
 export const profile =
-  "I am a conscientious, resourceful developer with strong multitasking, analytical, problem-solving, and decision-making skills. I love building both software and physical things, and especially combining the two. I communicate well in writing and in person, work equally happily on a team or solo, stay calm under pressure, and adapt quickly to change. I'm always picking up new skills and ideas in my own time and bringing them back to my work.";
+  "I am a conscientious, resourceful developer with strong multitasking, analytical, problem-solving, and decision-making skills. I am a highly trainable individual with an extremely adpatable and broad spectrum of skills and experience. I love building both software and physical things, and especially combining the two. I communicate well in writing and in person, work equally happily on a team or solo, stay calm under pressure, and adapt quickly to change. I'm always picking up new skills and ideas in my own time and bringing them back to my work.";
 
 export const education = [
   {
