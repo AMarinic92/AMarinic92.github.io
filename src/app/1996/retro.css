@@ -1,0 +1,287 @@
+/* Peak 1996. This file is supposed to look like this. Do not tidy it up. */
+
+.geo {
+  min-height: 100dvh;
+  padding: 10px;
+  color: #00ff66;
+  background-color: #000010;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='18' cy='24' r='1.3'/%3E%3Ccircle cx='97' cy='11' r='.9'/%3E%3Ccircle cx='138' cy='52' r='1.5'/%3E%3Ccircle cx='63' cy='71' r='1'/%3E%3Ccircle cx='11' cy='104' r='1.4'/%3E%3Ccircle cx='120' cy='121' r='1'/%3E%3Ccircle cx='79' cy='146' r='1.2'/%3E%3Ccircle cx='44' cy='133' r='.8'/%3E%3C/g%3E%3Cg fill='%23ffff99'%3E%3Ccircle cx='150' cy='90' r='1'/%3E%3Ccircle cx='33' cy='58' r='.9'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  font-family: "Comic Sans MS", "Comic Neue", "Chalkboard SE", cursive;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: crosshair;
+  text-align: center;
+}
+
+.geo p,
+.geo li,
+.geo dd {
+  font-size: 15px;
+}
+
+/* Chunky boxes, ridged borders, the works ------------------------------- */
+
+.geo-box {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border: 5px ridge #ff00ff;
+  background: #000080;
+  text-align: left;
+}
+
+.geo-box > h2 {
+  margin: -10px -14px 10px;
+  padding: 4px 10px;
+  border-bottom: 3px double #00ffff;
+  background: #800080;
+  color: #ffff00;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.geo h1 {
+  margin: 6px 0;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: clamp(30px, 7vw, 62px);
+  line-height: 1.05;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff8800,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #4488ff,
+    #ff00ff,
+    #ff0000
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: geo-rainbow 4s linear infinite;
+}
+
+.geo h3 {
+  margin: 12px 0 2px;
+  color: #ffff00;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.geo hr {
+  height: 8px;
+  margin: 14px 0;
+  border: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff0000 0 14px,
+    #ff8800 14px 28px,
+    #ffff00 28px 42px,
+    #00ff00 42px 56px,
+    #00ffff 56px 70px,
+    #4488ff 70px 84px,
+    #ff00ff 84px 98px
+  );
+}
+
+.geo a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+.geo a:visited {
+  color: #ff88ff;
+}
+.geo a:hover {
+  background: #ffff00;
+  color: #ff0000;
+}
+.geo a.geo-btn,
+.geo a.geo-btn:hover {
+  display: inline-block;
+  color: #000;
+  background: #c0c0c0;
+  text-decoration: none;
+}
+
+.geo ul {
+  margin: 4px 0;
+  padding-left: 24px;
+  list-style: square; /* fallback: the string form is newer than the joke */
+  list-style-type: "☞ ";
+}
+
+.geo dt {
+  color: #ffff00;
+  font-weight: bold;
+}
+.geo dd {
+  margin: 0 0 8px;
+}
+
+.geo small {
+  font-size: 12px;
+  color: #bbbbbb;
+}
+
+/* Widgets --------------------------------------------------------------- */
+
+.geo-marquee {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  border: 4px outset #00ffff;
+  background: #000;
+  color: #ffff00;
+  white-space: nowrap;
+}
+.geo-marquee > span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: geo-scroll 22s linear infinite;
+}
+
+.geo-blink {
+  animation: geo-blink 1.1s steps(1, end) infinite;
+}
+
+.geo-badge {
+  display: inline-block;
+  margin: 2px;
+  padding: 1px 7px;
+  border: 2px outset #ffff00;
+  background: #800080;
+  color: #ffff00;
+  font-size: 13px;
+}
+
+.geo-btn {
+  margin: 3px;
+  padding: 4px 12px;
+  border: 4px outset #c0c0c0;
+  background: #c0c0c0;
+  color: #000;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.geo-btn:active {
+  border-style: inset;
+}
+
+.geo-counter {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 3px inset #808080;
+  background: #000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+.geo-construction {
+  display: inline-block;
+  animation: geo-bounce 0.9s ease-in-out infinite alternate;
+  font-size: 26px;
+}
+
+/* Preflight makes img/iframe display:block, so centre them the block way. */
+.geo-frame {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 5px ridge #00ff00;
+  background: #000;
+}
+.geo-video {
+  width: 400px;
+  aspect-ratio: 16 / 9;
+}
+
+.geo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.geo-gallery img {
+  width: 104px;
+  height: 104px;
+  border: 3px ridge #00ff00;
+  object-fit: cover;
+}
+
+.geo-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+.geo-trail > span {
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  color: #ffff00;
+  font-size: 18px;
+  text-shadow: 0 0 6px #ff00ff;
+  will-change: transform;
+}
+
+/* Layout: two columns, because frames were a bad idea even then ---------- */
+
+.geo-cols {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: start;
+  text-align: left;
+}
+@media (max-width: 720px) {
+  .geo-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes geo-rainbow {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes geo-scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes geo-blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes geo-bounce {
+  to {
+    transform: translateY(-7px);
+  }
+}
+
+/* Nostalgia is not worth a migraine. */
+@media (prefers-reduced-motion: reduce) {
+  .geo *,
+  .geo *::before,
+  .geo *::after {
+    animation: none !important;
+  }
+  .geo h1 {
+    background: none;
+    color: #ffff00;
+  }
+}
