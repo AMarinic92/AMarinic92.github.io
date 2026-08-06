@@ -282,5 +282,5 @@ export const kommandosPhotos = [
   "/portfolio/kommandos/squig-2.JPG",
   "/portfolio/kommandos/squig-3.JPG",
   ];
-  
+
 export const coffinYouTubeId = "DJ8E2NJVhaQ";
