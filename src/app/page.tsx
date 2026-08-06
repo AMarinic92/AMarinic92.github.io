@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
+import { GitHubContributions } from "@/components/github-contributions";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 import {
@@ -97,6 +98,13 @@ export default function Home() {
           <FieldDescription className="leading-relaxed">
             {profile}
           </FieldDescription>
+        </Section>
+
+        <Section id="github" title="GitHub">
+          <GitHubContributions
+            username={site.socials.github.split("/").pop()!}
+            href={site.socials.github}
+          />
         </Section>
 
         <Section id="projects" title="Projects">
