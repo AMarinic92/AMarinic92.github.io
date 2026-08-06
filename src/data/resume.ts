@@ -281,6 +281,6 @@ export const kommandosPhotos = [
   "/portfolio/kommandos/squig-1.JPG",
   "/portfolio/kommandos/squig-2.JPG",
   "/portfolio/kommandos/squig-3.JPG",
-];
-
-export const coffinYouTubeId = "_OO-Skr_nrE";
+  ];
+  
+export const coffinYouTubeId = "DJ8E2NJVhaQ";
