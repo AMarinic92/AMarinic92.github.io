@@ -30,6 +30,21 @@
   --sidebar-accent-foreground: hsl(240 5.9% 10%);
   --sidebar-border: hsl(220 13% 91%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
+
+  /* Controller plastic, sampled off the hardware rather than derived from the
+     palette. Kept as hex so they can be eyeballed against a reference photo.
+     The shell is shared; the face buttons switch region by theme — light is
+     the North American SNES (SNS-005), dark is the Super Famicom. */
+  --snes-shell: #d5d1cf;
+  --snes-shell-deep: #b8b4b2;
+  --snes-dpad: #45454e;
+  --snes-pill: #5a5a62;
+  --snes-print: #8d8884;
+  --snes-a: #6f5fa6;
+  --snes-b: #6f5fa6;
+  --snes-x: #a89cd0;
+  --snes-y: #a89cd0;
+  --snes-btn-print: #ffffff;
 }
 
 .dark {
@@ -59,6 +74,15 @@
   --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
+
+  /* Super Famicom (SHVC-005): four coloured buttons instead of two purples.
+     Dark ink on them — white on the yellow B is unreadable, and B is one of
+     the two letters anyone actually needs to read here. */
+  --snes-a: #d4483f;
+  --snes-b: #e8c33e;
+  --snes-x: #4a7fd0;
+  --snes-y: #56a04c;
+  --snes-btn-print: #2b2b33;
 }
 
 @theme inline {
@@ -92,6 +116,16 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+  --color-snes-shell: var(--snes-shell);
+  --color-snes-shell-deep: var(--snes-shell-deep);
+  --color-snes-dpad: var(--snes-dpad);
+  --color-snes-pill: var(--snes-pill);
+  --color-snes-print: var(--snes-print);
+  --color-snes-a: var(--snes-a);
+  --color-snes-b: var(--snes-b);
+  --color-snes-x: var(--snes-x);
+  --color-snes-y: var(--snes-y);
+  --color-snes-btn-print: var(--snes-btn-print);
 }
 
 @layer base {

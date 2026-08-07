@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 
 import { GitHubContributions } from "@/components/github-contributions";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { SnesHint } from "@/components/snes-hint";
 
 import {
   site,
@@ -202,11 +203,15 @@ export default function Home() {
 
         <Section id="hobbies" title="Hobbies">
           <FieldContent className="flex-row flex-wrap gap-2">
-            {hobbies.map((h) => (
-              <Badge key={h} variant="outline">
-                {h}
-              </Badge>
-            ))}
+            {hobbies.map((h) =>
+              h === "Video Games" ? (
+                <SnesHint key={h} label={h} />
+              ) : (
+                <Badge key={h} variant="outline">
+                  {h}
+                </Badge>
+              ),
+            )}
           </FieldContent>
         </Section>
       </main>

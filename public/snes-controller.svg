@@ -1,0 +1,89 @@
+<svg id="snes-controller" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200"
+     font-family="ui-sans-serif, system-ui, sans-serif">
+  <!--
+    Standalone artwork for the /1996 konami hint. Safe to open and edit in
+    Inkscape/Figma/any editor.
+
+    Two contracts the app relies on. Keep them when editing:
+      1. A data-key attribute marks a pressable part, and its value is the
+         KeyboardEvent.key that part fires. The app reads it off the click
+         target and knows nothing about the geometry, so parts can be moved,
+         restyled or redrawn freely.
+      2. Fills reference the snes custom properties, each with a literal
+         fallback. Inlined into the page they pick up the theme (light is the
+         North American SNES, dark the Super Famicom); opened standalone, the
+         fallbacks render the light scheme.
+
+    Note for editors: XML forbids a double hyphen inside a comment, so the
+    property names are spelled without their leading dashes here.
+  -->
+  <style>
+    #snes-controller [data-key] { cursor: pointer; }
+    #snes-controller [data-key]:active { opacity: .7; }
+  </style>
+
+  <g id="shoulders" fill="var(--snes-shell-deep, #b8b4b2)">
+    <rect x="40" y="14" width="90" height="34" rx="16"/>
+    <rect x="290" y="14" width="90" height="34" rx="16"/>
+  </g>
+
+  <!--
+    Body. One path so the top is a single flat edge shared by both lobes and
+    the waist; the entire dog-bone taper happens underneath. Waist underside
+    sits at y=130, i.e. 64% of the 156-tall lobes — matching the hardware.
+    Anything above ~72% reads as a slab with two bumps.
+  -->
+  <path id="body" fill="var(--snes-shell, #d5d1cf)"
+        d="M 42 30 H 378 A 34 34 0 0 1 412 64 V 126 A 60 60 0 0 1 352 186
+           H 312 C 284 186 278 130 258 130 H 162 C 142 130 136 186 108 186
+           H 68 A 60 60 0 0 1 8 126 V 64 A 34 34 0 0 1 42 30 Z"/>
+
+  <g id="recesses" fill="var(--snes-shell-deep, #b8b4b2)">
+    <circle cx="93" cy="109" r="44"/>
+    <ellipse cx="327" cy="109" rx="62" ry="44" transform="rotate(-25 327 109)"/>
+  </g>
+
+  <text id="wordmark" x="210" y="62" text-anchor="middle" font-size="8"
+        letter-spacing="1.5" fill="var(--snes-print, #8d8884)">SUPER NINTENDO</text>
+
+  <!-- Arms overlap the static centre square, so each can be pressed on its
+       own and the seams stay hidden. -->
+  <g id="dpad" fill="var(--snes-dpad, #45454e)">
+    <rect x="81" y="97" width="24" height="24"/>
+    <rect data-key="ArrowUp" x="81" y="78" width="24" height="25" rx="6"/>
+    <rect data-key="ArrowDown" x="81" y="115" width="24" height="25" rx="6"/>
+    <rect data-key="ArrowLeft" x="62" y="97" width="25" height="24" rx="6"/>
+    <rect data-key="ArrowRight" x="99" y="97" width="25" height="24" rx="6"/>
+  </g>
+
+  <g id="face-buttons" text-anchor="middle" font-size="15" font-weight="bold"
+     fill="var(--snes-btn-print, #ffffff)">
+    <g data-key="x">
+      <circle cx="327" cy="77" r="18" fill="var(--snes-x, #a89cd0)"/>
+      <text x="327" y="82">X</text>
+    </g>
+    <g data-key="y">
+      <circle cx="295" cy="109" r="18" fill="var(--snes-y, #a89cd0)"/>
+      <text x="295" y="114">Y</text>
+    </g>
+    <g data-key="a">
+      <circle cx="359" cy="109" r="18" fill="var(--snes-a, #6f5fa6)"/>
+      <text x="359" y="114">A</text>
+    </g>
+    <g data-key="b">
+      <circle cx="327" cy="141" r="18" fill="var(--snes-b, #6f5fa6)"/>
+      <text x="327" y="146">B</text>
+    </g>
+  </g>
+
+  <g id="select-start" fill="var(--snes-pill, #5a5a62)">
+    <rect x="152" y="86" width="42" height="12" rx="6" transform="rotate(-22 173 92)"/>
+    <rect data-key="Enter" x="206" y="86" width="42" height="12" rx="6"
+          transform="rotate(-22 227 92)"/>
+  </g>
+  <g text-anchor="middle" font-size="7" letter-spacing="0.5"
+     fill="var(--snes-print, #8d8884)">
+    <text x="168" y="112">SELECT</text>
+    <text x="224" y="112">START</text>
+  </g>
+</svg>
