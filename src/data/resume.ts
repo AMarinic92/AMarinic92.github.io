@@ -68,6 +68,22 @@ export const projects: {
   href?: string;
 }[] = [
   {
+    title: "ws2812-spi",
+    subtitle: "WS2812B / SK6812 LED driver for SAM D5x / E5x: C, SERCOM SPI + DMA",
+    period: "Aug 2026 – present",
+    description:
+      "A standalone addressable-LED driver extracted from Coffin-Reborn, developed on an ATSAME51J20A. Each LED bit is encoded as three SPI bits at 2.4 MHz, so the strip's timing comes out of the SERCOM shift register instead of cycle-counted bit-banging, and a DMAC channel carries the frame with the CPU uninvolved, so interrupts can't corrupt the waveform. No fixed strip length and no hard-coded SERCOM or DMA channel: the buffer is yours and both peripherals are runtime parameters, with blocking, async, and FreeRTOS-blocking transmit paths.",
+    href: "https://github.com/AMarinic92/ws2812-spi",
+  },
+  {
+    title: "Spewer",
+    subtitle: "Embedded C firmware: SAME51 / MPLAB Harmony + CMake",
+    period: "Aug 2026 – present",
+    description:
+      "A SAME51 prop build pairing servo motion with addressable lighting, consuming the ws2812-spi driver as a git submodule. MCC Melody generated configuration is kept walled off from hand-written application code, with a CMake build tree over the top.",
+    href: "https://github.com/AMarinic92/Spewer",
+  },
+  {
     title: "Coffin Animatronic (Reborn)",
     subtitle: "Embedded C firmware: SAME51 / Microchip Harmony",
     period: "Sep 2025 – present",
